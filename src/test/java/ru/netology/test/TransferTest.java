@@ -1,7 +1,5 @@
 package ru.netology.test;
 
-import com.codeborne.selenide.Configuration;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.data.DataUser;
@@ -18,12 +16,8 @@ public class TransferTest {
 
     @BeforeEach
     void startSetup() {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("incognito");
-        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
         open("http://localhost:9999");
-//        Configuration.holdBrowserOpen = true;
         var loginPage = new PageLogin();
         var autInfo = getAutInfo();
         var loginVer = loginPage.validLogin(autInfo);

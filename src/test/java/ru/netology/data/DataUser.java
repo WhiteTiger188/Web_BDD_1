@@ -45,7 +45,7 @@ public class DataUser {
     }
 
     public static int getInvalidAmountTransit(int allBalance) {
-        return new Random().nextInt(100000 - Math.abs(allBalance) + 1) + allBalance;
+        return new Random().nextInt(10000 - Math.abs(allBalance) + 1) + allBalance;
     }
 
     public static float getValidFloatAmountTransit(int allBalance) {
